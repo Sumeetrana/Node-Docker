@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package.json .
 
 # Installing all the dependencies mentioned in package.json file
-RUN npm install
+RUN yarn
 
 # Copy all the files in /app
 COPY . ./
@@ -17,4 +17,4 @@ COPY . ./
 EXPOSE 4040
 
 # command to run the application
-CMD [ "node", "index.js" ]
+CMD [ "npm", "run", "dev"]
